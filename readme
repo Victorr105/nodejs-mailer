@@ -1,1 +1,2 @@
-tutorial link = "https://youtu.be/n8fVC5UFRjA";
+The project above is a mernstack project for email handling using nodemailer.The link to the tutorial is below and note that the tutorial only shows how to implement node mailer.
+if you would like to learn about the nodemailer implementation from scratch , here is the link to the tutorial with the basic steps => tutorial link = "https://youtu.be/n8fVC5UFRjA";
