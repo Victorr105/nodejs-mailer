@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 // transport protocal method
 const transporter = nodemailer.createTransport(
     {
@@ -11,9 +11,10 @@ const transporter = nodemailer.createTransport(
        } 
     }
 )
+async function sendMail(to,sub,msg) {
 
-function sendMail(to,sub,msg){
-    transporter.sendMail(
+    try {
+        transporter.sendMail(
         {
             to:to,
             subject:sub,
@@ -21,6 +22,13 @@ function sendMail(to,sub,msg){
         }
     );
     console.log('email sent')
+    } catch (error) {
+        console.error(error);
+    }
+    
 }
+
+console.log(transporter);
+
 
 sendMail("njorovickie7@gmail.com", "this is the subject", "This is a test");
