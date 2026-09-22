@@ -1,8 +1,10 @@
 import nodemailer from "nodemailer";
+import dotenv from 'dotenv';
+dotenv.config();
 // transport protocal method
 const transporter = nodemailer.createTransport(
     {
-       secured:true,
+       secure:true,
        host:'smtp.gmail.com',
        port: 465,
        auth:{
