@@ -1,6 +1,10 @@
 import nodemailer from "nodemailer";
 import dotenv from 'dotenv';
 dotenv.config();
+
+const userMail = process.env.USER_MAIL;
+const userPass = process.env.USER_PASSWORD;
+
 // transport protocal method
 const transporter = nodemailer.createTransport(
     {
@@ -8,8 +12,8 @@ const transporter = nodemailer.createTransport(
        host:'smtp.gmail.com',
        port: 465,
        auth:{
-        user:"njorogevictorr@gmail.com",
-        pass:"hyafxvfccmzemufy"
+        user:userMail,
+        pass:userPass
        } 
     }
 )
